@@ -1,0 +1,729 @@
+{
+	"info": {
+		"_postman_id": "5e96abcd-e320-475f-b44c-243a9e54b3e2",
+		"name": "Home Expenses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12465908"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "getQueryByTypeId",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/category/index.php?api=getQueryByTypeId&&userId=1&&type=0",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"category",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "getQueryByTypeId"
+								},
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "type",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteQuery",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/category/index.php?api=DeleteQuery&id=8",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"category",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "DeleteQuery"
+								},
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertQuery",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Salary\",\n    \"createdBy\": 3,\n    \"type\":1 // 0-Expenses || 1-Income\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/category/index.php?api=InsertQuery",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"category",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "InsertQuery"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateQuery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ewe\",\n    \"id\": 7\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/category/index.php?api=UpdateQuery",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"category",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "UpdateQuery"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllQuery",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/category/index.php?api=all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"category",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "getQueryByUserId",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/transactions/index.php?api=getQueryByUserId&&userId=1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"transactions",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "getQueryByUserId"
+								},
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQueryByCategoryId",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/transactions/index.php?api=getQueryByCategoryId&&categoryId=1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"transactions",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "getQueryByCategoryId"
+								},
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "categoryId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteQuery",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/transactions/index.php?api=DeleteQuery&id=6",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"transactions",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "DeleteQuery"
+								},
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertQuery",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": 1,  // 0-Pay || 1-Get\n    \"category\": \"44\",\n    \"details\": \"Salary\",\n    \"pay\": \"36000\",\n    \"userid\": \"1\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/transactions/index.php?api=InsertQuery",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"transactions",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "InsertQuery"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDataWithFilters",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"page\": 1,\n    \"perPage\": 3,\n    \"sortColumn\": \"pay\",\n    \"sortOrder\": \"DESC\",  // ASC || DESC\n    \"conditions\":{\n        // \"type\":1\n    },\n    \"searchQuery\":\"Flo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/transactions/index.php?api=getDataWithFilters",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"transactions",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "getDataWithFilters"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateQuery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"2\",\n    \"details\": \"Biscut\",\n    \"pay\": \"11\",\n    \"userid\": \"1\",\n    \"id\": 3\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/expenses/index.php?api=UpdateQuery",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"expenses",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "UpdateQuery"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllQuery",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/expenses/index.php?api=all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"expenses",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getQueryByUserId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJlbWFpbCI6Im1hbmRlZXBAZ21haWwuY28iLCJwYXNzd29yZCI6IjEyMzQ1IiwiZnVsbG5hbWUiOiJNYW5kZWVwIEJodWxsYXIiLCJjcmVhdGVkIjoiMjAyMy0wOC0xMSIsImRlbGV0ZWQiOiIwIn0=.TgH6ULV8CY8gPF1YuBOG2dAAyWHli/FVlKrFPXMiTCs=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/index.php?api=getQueryByUserId&userId=1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "getQueryByUserId"
+								},
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": null,
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteQuery",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/category/index.php?api=DeleteQuery&id=8",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"category",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "DeleteQuery"
+								},
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InsertQuery",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"Mandeep Singh\",\n    \"email\": \"mandeep@gmail.co\",\n    \"password\":\"12345\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/index.php?api=InsertQuery",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "InsertQuery"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"mandeep@gmail.co\",\n    \"password\":\"12345\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/index.php?api=login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "login"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateQuery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"Mandeep Bhullar\",\n    \"email\": \"mandeep@gmail.co\",\n    \"id\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user/index.php?api=UpdateQuery",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "UpdateQuery"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllQuery",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ewogICAgaWQ6MSwKICAgIG5hbWU6IlNhdG5hbSIsCiAgICBlbWFpbCJzYXRuYW1AaGhoLmNvbSIKfQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/user/index.php?api=all",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user",
+								"index.php"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
